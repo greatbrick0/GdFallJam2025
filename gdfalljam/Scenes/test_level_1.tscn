@@ -10,7 +10,7 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Player2" parent="." instance=ExtResource("3_pu8o7")]
+[node name="Skeleton" parent="." instance=ExtResource("3_pu8o7")]
 position = Vector2(289, -103)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

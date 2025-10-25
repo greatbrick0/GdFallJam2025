@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0qiakvp0ie22"]
+[gd_scene load_steps=10 format=3 uid="uid://c0qiakvp0ie22"]
 
 [ext_resource type="Script" uid="uid://bnevd1r0cbotv" path="res://Scripts/skeleton.gd" id="1_81u3t"]
 [ext_resource type="Texture2D" uid="uid://db7mbv4tiseqr" path="res://Sprites/Skeleton_Type1.png" id="3_vd5x3"]
@@ -42,6 +42,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(32, 60)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_81u3t"]
+radius = 16.0
+height = 60.0
+
 [node name="Skeleton" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_81u3t")
@@ -54,3 +58,12 @@ sprite_frames = SubResource("SpriteFrames_shq1q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cvnsp")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_81u3t")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

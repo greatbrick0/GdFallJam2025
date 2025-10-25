@@ -18,3 +18,9 @@ func _physics_process(delta):
 	
 	$Visuals.scale.x = (1 if facingRight else -1)
 	move_and_slide()
+
+func _on_hitbox_area_entered(area):
+	if(area.get_parent().velocity.y > velocity.y):
+		print(name + " died")
+	else:
+		print(name + " killed")
