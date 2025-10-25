@@ -1,19 +1,56 @@
-[gd_scene load_steps=4 format=3 uid="uid://uxmg7mq10mgq"]
+[gd_scene load_steps=9 format=3 uid="uid://uxmg7mq10mgq"]
 
 [ext_resource type="Script" uid="uid://csswtlckcwryr" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://dj04untltawv3" path="res://icon.svg" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://db7mbv4tiseqr" path="res://Sprites/Skeleton_Type1.png" id="2_cvnsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pegji"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 23, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5abox"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(23, 0, 23, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8sxu"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(46, 0, 23, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks230"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(69, 0, 23, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6t5aa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pegji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5abox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8sxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks230")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(64, 64)
+size = Vector2(32, 60)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
 
 [node name="Visuals" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_v0iea")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visuals"]
+modulate = Color(0.570313, 1, 0, 1)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cvnsp")

@@ -16,7 +16,9 @@ func _physics_process(delta):
 	var direction = Input.get_axis("moveleft", "moveright")
 	if direction:
 		velocity.x = direction * speed
+		facingRight = direction > 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
-		
+	
+	$Visuals.scale.x = (1 if facingRight else -1)
 	move_and_slide()

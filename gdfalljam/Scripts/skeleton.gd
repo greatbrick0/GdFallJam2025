@@ -12,5 +12,6 @@ func _physics_process(delta):
 		velocity.x = 0
 	else:
 		velocity.x = speed * (1 if facingRight else -1)
-
+	
+	$Visuals.scale.x = (1 if facingRight else -1)
 	move_and_slide()
