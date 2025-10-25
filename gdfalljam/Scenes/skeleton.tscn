@@ -43,6 +43,7 @@ animations = [{
 size = Vector2(32, 60)
 
 [node name="Skeleton" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_81u3t")
 
 [node name="Visuals" type="Node2D" parent="."]
