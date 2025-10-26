@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 @export  var speed = 300.0
 @export var jumpForce = -500.0
 
@@ -24,7 +23,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_hitbox_area_entered(area: Area2D):
-	if(area.get_parent().velocity.y > velocity.y):
+	if(area.get_parent().velocity.y >= velocity.y):
 		print(name + " died")
 	else:
 		velocity.y = jumpForce
