@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://eiq2oqtoafcv"]
+
+[ext_resource type="Script" uid="uid://b72gcd25xfh7h" path="res://Scripts/exit_door.gd" id="1_b4nh8"]
+[ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="1_elbft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elbft"]
+size = Vector2(64, 64)
+
+[node name="ExitDoor" type="Node2D"]
+script = ExtResource("1_b4nh8")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+modulate = Color(0, 0.585938, 0.0366211, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_elbft")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_elbft")
