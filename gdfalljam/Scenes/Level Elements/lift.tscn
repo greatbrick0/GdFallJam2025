@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://le8i56mmqdmx"]
 
 [ext_resource type="Script" uid="uid://3ah4v3xn6hbb" path="res://Scripts/lift.gd" id="1_3d2sh"]
-[ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="2_2gsix"]
+[ext_resource type="Texture2D" uid="uid://cg5vmna7jxot0" path="res://Sprites/platform.png" id="2_3d2sh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxmxq"]
 size = Vector2(192, 64)
@@ -12,9 +12,9 @@ script = ExtResource("1_3d2sh")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(0.548274, 0.935262, 0, 1)
-scale = Vector2(2, 2)
-texture = ExtResource("2_2gsix")
+position = Vector2(0, -5)
+scale = Vector2(2, 9)
+texture = ExtResource("2_3d2sh")
 region_enabled = true
 region_rect = Rect2(0, 0, 96, 32)
 

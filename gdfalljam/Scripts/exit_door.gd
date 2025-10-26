@@ -14,9 +14,9 @@ func _ready():
 
 func _process(delta):
 	if(blockers <= 0):
-		doorSprite.modulate = Color.MEDIUM_SPRING_GREEN
+		doorSprite.texture = load("res://Sprites/door2 copyf5.png")
 	else:
-		doorSprite.modulate = Color.FOREST_GREEN
+		doorSprite.texture = load("res://Sprites/door2 copy (1).png")
 
 func Interact() -> void:
 	if(decorative): return

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://eiq2oqtoafcv"]
 
 [ext_resource type="Script" uid="uid://b72gcd25xfh7h" path="res://Scripts/exit_door.gd" id="1_b4nh8"]
-[ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="1_elbft"]
+[ext_resource type="Texture2D" uid="uid://kgdwl8nh6mci" path="res://Sprites/door2 copyf5.png" id="2_wo4nv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_elbft"]
 size = Vector2(64, 64)
@@ -13,9 +13,9 @@ script = ExtResource("1_b4nh8")
 z_index = -5
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(0, 0.636529, 0.282909, 1)
-scale = Vector2(2, 2)
-texture = ExtResource("1_elbft")
+position = Vector2(0, -24)
+scale = Vector2(3, 3.5)
+texture = ExtResource("2_wo4nv")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 

@@ -51,7 +51,7 @@ height = 60.0
 collision_layer = 8
 collision_mask = 9
 script = ExtResource("1_81u3t")
-speed = 150.0
+speed = 165.0
 
 [node name="Visuals" type="Node2D" parent="."]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgosw5ukbqhgr"]
 
 [ext_resource type="Script" path="res://Scripts/grave_stone.gd" id="1_d4cdo"]
-[ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="1_mc51p"]
 [ext_resource type="PackedScene" uid="uid://c0qiakvp0ie22" path="res://Scenes/skeleton.tscn" id="2_rwwg3"]
+[ext_resource type="Texture2D" uid="uid://ufx02kx1clfg" path="res://Sprites/Grave.png" id="3_uni3t"]
 [ext_resource type="PackedScene" uid="uid://e2all1a2nvit" path="res://Scenes/VFX/Fire_VFX_CPUBurst.tscn" id="4_uni3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mc51p"]
@@ -15,11 +15,10 @@ skeleObj = ExtResource("2_rwwg3")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(1, 0.425265, 0.866704, 1)
-scale = Vector2(2, 2)
-texture = ExtResource("1_mc51p")
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_uni3t")
 region_enabled = true
-region_rect = Rect2(64, 0, 32, 32)
+region_rect = Rect2(0, 0, 32, 32)
 
 [node name="Particles" parent="Visuals" instance=ExtResource("4_uni3t")]
 

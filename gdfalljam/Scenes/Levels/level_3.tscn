@@ -41,10 +41,10 @@ position = Vector2(-8, 338)
 [node name="TutorialPrompt" type="Node2D" parent="."]
 
 [node name="Label" type="Label" parent="TutorialPrompt"]
-offset_left = 380.0
-offset_top = 227.0
-offset_right = 830.0
-offset_bottom = 357.0
+offset_left = -842.0
+offset_top = 217.0
+offset_right = -392.0
+offset_bottom = 347.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
@@ -52,6 +52,24 @@ theme_override_fonts/font = ExtResource("6_yy6i0")
 theme_override_font_sizes/font_size = 60
 text = "SOME DOORS NEED
 TO BE UNLOCKED"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TutorialPrompt" type="Node2D" parent="TutorialPrompt"]
+
+[node name="Label" type="Label" parent="TutorialPrompt/TutorialPrompt"]
+offset_left = 364.0
+offset_top = 212.0
+offset_right = 874.0
+offset_bottom = 342.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("6_yy6i0")
+theme_override_font_sizes/font_size = 60
+text = "JUMP ON SKELETONS
+TO SQUISH THEM"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

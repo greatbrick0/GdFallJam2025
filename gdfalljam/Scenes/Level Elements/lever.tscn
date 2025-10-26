@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpeax3brrhs7m"]
 
 [ext_resource type="Script" uid="uid://bh0e4vgh7xtge" path="res://Scripts/lever.gd" id="1_wv1st"]
-[ext_resource type="Texture2D" uid="uid://djm3a2d42dxls" path="res://Sprites/Skeleton_Type1_Dead.png" id="2_6kuia"]
+[ext_resource type="Texture2D" uid="uid://cpa61cw5fjggn" path="res://Sprites/Lever.png" id="2_b5wb4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wv1st"]
 radius = 32.0
@@ -12,9 +12,8 @@ script = ExtResource("1_wv1st")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(0.481958, 0.771184, 0, 1)
 scale = Vector2(2, 2)
-texture = ExtResource("2_6kuia")
+texture = ExtResource("2_b5wb4")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 128

@@ -7,10 +7,12 @@ signal UsedPlate(bool)
 
 func _on_triggger_area_body_entered(body):
 	bodyCount += 1
+	$Visuals/Sprite2D.texture = load("res://Sprites/Buttonbrighter.png")
 	CheckPressed()
 
 func _on_triggger_area_body_exited(body):
 	bodyCount -= 1
+	$Visuals/Sprite2D.texture = load("res://Sprites/Button.png")
 	CheckPressed()
 
 func CheckPressed() -> void:
