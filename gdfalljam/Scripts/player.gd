@@ -17,5 +17,8 @@ func _physics_process(delta):
 	$Visuals.scale.x = (1 if facingRight else -1)
 	move_and_slide()
 
+func GetHit() -> void:
+	LevelManager.StartTransition()
+
 func DoHit() -> void:
 	velocity.y = jumpForce

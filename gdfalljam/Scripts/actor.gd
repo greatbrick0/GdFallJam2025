@@ -18,9 +18,9 @@ func _physics_process(delta):
 
 func _on_hitbox_area_entered(area: Area2D):
 	if(area.get_parent().velocity.y >= velocity.y):
-		GetHit()
+		call_deferred("GetHit")
 	else:
-		DoHit()
+		call_deferred("DoHit")
 
 func GetHit() -> void:
 	print(name + " died")
