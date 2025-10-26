@@ -10,13 +10,14 @@ func _process(delta):
 func ResetLevel() -> void:
 	get_tree().change_scene_to_file(currentLevel)
 
-func StartTransition(newLevel: String = "") -> void:
-	if(midTransition): return
+func StartTransition(newLevel: String = "") -> bool:
+	if(midTransition): return false
 	
 	midTransition = true
 	if(newLevel == ""): newLevel = currentLevel
 	currentLevel = newLevel
 	$ScreenFade.play("FadeOut")
+	return true
 
 func _on_screen_fade_animation_finished(anim_name):
 	if(anim_name == "FadeOut"):
