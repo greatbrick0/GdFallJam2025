@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgosw5ukbqhgr"]
+
+[ext_resource type="Script" uid="uid://blcvt3h7lfock" path="res://Scripts/grave_stone.gd" id="1_d4cdo"]
+[ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="1_mc51p"]
+[ext_resource type="PackedScene" uid="uid://c0qiakvp0ie22" path="res://Scenes/skeleton.tscn" id="2_rwwg3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mc51p"]
+size = Vector2(64, 64)
+
+[node name="GraveStone" type="Node2D"]
+script = ExtResource("1_d4cdo")
+skeleObj = ExtResource("2_rwwg3")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+modulate = Color(1, 0, 0.84375, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mc51p")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="TriggerArea" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+shape = SubResource("RectangleShape2D_mc51p")
+
+[connection signal="area_entered" from="TriggerArea" to="." method="_on_trigger_area_area_entered"]

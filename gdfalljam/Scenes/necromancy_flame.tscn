@@ -8,6 +8,8 @@ size = Vector2(64, 64)
 
 [node name="NecromancyFlame" type="Node2D"]
 script = ExtResource("1_ca6tn")
+lifeTime = 0.8
+activateTime = 0.5
 
 [node name="Visuals" type="Node2D" parent="."]
 
@@ -22,3 +24,4 @@ collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
 shape = SubResource("RectangleShape2D_fllcq")
+disabled = true

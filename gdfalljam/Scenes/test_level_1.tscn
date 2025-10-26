@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://p4jpdixxijok"]
+[gd_scene load_steps=6 format=4 uid="uid://p4jpdixxijok"]
 
 [ext_resource type="PackedScene" uid="uid://uxmg7mq10mgq" path="res://Scenes/player.tscn" id="1_v0do5"]
 [ext_resource type="PackedScene" uid="uid://c0qiakvp0ie22" path="res://Scenes/skeleton.tscn" id="3_pu8o7"]
 [ext_resource type="TileSet" uid="uid://y5q7a6m80lot" path="res://tileset1.tres" id="3_yq4yk"]
 [ext_resource type="PackedScene" uid="uid://cpeax3brrhs7m" path="res://Scenes/lever.tscn" id="4_pu8o7"]
+[ext_resource type="PackedScene" uid="uid://dgosw5ukbqhgr" path="res://Scenes/grave_stone.tscn" id="5_ok5u4"]
 
 [node name="TestLevel1" type="Node2D"]
 
@@ -13,9 +14,6 @@
 
 [node name="Skeleton" parent="." instance=ExtResource("3_pu8o7")]
 position = Vector2(289, -103)
-
-[node name="Skeleton2" parent="." instance=ExtResource("3_pu8o7")]
-position = Vector2(362, -103)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
@@ -28,3 +26,6 @@ position = Vector2(168, -27)
 [node name="Lever2" parent="." instance=ExtResource("4_pu8o7")]
 position = Vector2(406, -94)
 oneUse = true
+
+[node name="GraveStone" parent="." instance=ExtResource("5_ok5u4")]
+position = Vector2(340, -95)
