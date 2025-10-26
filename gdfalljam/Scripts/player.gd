@@ -23,8 +23,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
-	$Visuals.scale.x = (1 if facingRight else -1)
-	move_and_slide()
+	HandleMovement()
 
 func HandleFlames() -> void:
 	if(global_position.distance_to(prevFlamePos) > flameSpacing):

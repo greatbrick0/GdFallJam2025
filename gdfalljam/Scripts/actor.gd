@@ -13,12 +13,19 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	HandleMovement()
+
+func HandleMovement() -> void:
 	$Visuals.scale.x = (1 if facingRight else -1)
+	if(velocity.x):
+		$Visuals/AnimatedSprite2D.play()
+	else:
+		$Visuals/AnimatedSprite2D.pause()
 	move_and_slide()
 
 func _on_hitbox_area_entered(area: Area2D):
 	if(area.get_parent().velocity.y >= velocity.y):
-		call_deferred("GetHit")
+		call_deferred("GetHit", 0)
 	else:
 		call_deferred("DoHit")
 

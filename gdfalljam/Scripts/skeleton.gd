@@ -11,8 +11,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = speed * (1 if facingRight else -1)
 	
-	$Visuals.scale.x = (1 if facingRight else -1)
-	move_and_slide()
+	HandleMovement()
 
 func GetHit() -> void:
 	queue_free()
