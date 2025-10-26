@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://d1lss0xvxf2id"]
+[gd_scene load_steps=6 format=4 uid="uid://d1lss0xvxf2id"]
 
 [ext_resource type="PackedScene" uid="uid://uxmg7mq10mgq" path="res://Scenes/Level Elements/player.tscn" id="1_vb8ac"]
 [ext_resource type="TileSet" uid="uid://y5q7a6m80lot" path="res://tileset1.tres" id="2_10co4"]
 [ext_resource type="FontFile" uid="uid://byd1mg16qsm8y" path="res://Fonts/ModernDOS8x16.ttf" id="3_08747"]
+[ext_resource type="PackedScene" uid="uid://le8i56mmqdmx" path="res://Scenes/Level Elements/lift.tscn" id="4_22gpn"]
+[ext_resource type="PackedScene" uid="uid://cpeax3brrhs7m" path="res://Scenes/Level Elements/lever.tscn" id="5_pyg1t"]
 
 [node name="Level1" type="Node2D"]
 
@@ -77,7 +79,17 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_fonts/font = ExtResource("3_08747")
 theme_override_font_sizes/font_size = 60
-text = "F TO INTERACT"
+text = "E TO INTERACT"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Lift" parent="." instance=ExtResource("4_22gpn")]
+position = Vector2(280, 370)
+blockers = 1
+positions = Array[Vector2]([Vector2(280, -14), Vector2(280, 370)])
+
+[node name="Lever" parent="." instance=ExtResource("5_pyg1t")]
+position = Vector2(-232, 114)
+
+[connection signal="UsedLever" from="Lever" to="Lift" method="AdjustBlockersByBool"]

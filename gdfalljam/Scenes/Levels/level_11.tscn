@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://g3m7m3repx6"]
+[gd_scene load_steps=5 format=4 uid="uid://g3m7m3repx6"]
 
 [ext_resource type="PackedScene" uid="uid://uxmg7mq10mgq" path="res://Scenes/Level Elements/player.tscn" id="1_tyv74"]
 [ext_resource type="TileSet" uid="uid://y5q7a6m80lot" path="res://tileset1.tres" id="2_aoa7l"]
+[ext_resource type="PackedScene" uid="uid://le8i56mmqdmx" path="res://Scenes/Level Elements/lift.tscn" id="3_aoa7l"]
+[ext_resource type="PackedScene" uid="uid://cpeax3brrhs7m" path="res://Scenes/Level Elements/lever.tscn" id="4_njv6j"]
 
 [node name="Level1" type="Node2D"]
 
@@ -110,3 +112,21 @@ offset_top = 68.0
 offset_right = -411.0
 offset_bottom = 158.0
 color = Color(0.876153, 0, 0.0757443, 1)
+
+[node name="Lift" parent="." instance=ExtResource("3_aoa7l")]
+position = Vector2(24, 178)
+blockers = 3
+positions = Array[Vector2]([Vector2(24, -398), Vector2(24, -206), Vector2(24, -14), Vector2(24, 178)])
+
+[node name="Lever" parent="." instance=ExtResource("4_njv6j")]
+position = Vector2(632, -78)
+
+[node name="Lever2" parent="." instance=ExtResource("4_njv6j")]
+position = Vector2(-648, -270)
+
+[node name="Lever3" parent="." instance=ExtResource("4_njv6j")]
+position = Vector2(600, -462)
+
+[connection signal="UsedLever" from="Lever" to="Lift" method="AdjustBlockersByBool"]
+[connection signal="UsedLever" from="Lever2" to="Lift" method="AdjustBlockersByBool"]
+[connection signal="UsedLever" from="Lever3" to="Lift" method="AdjustBlockersByBool"]
