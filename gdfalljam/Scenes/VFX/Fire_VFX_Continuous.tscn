@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqbhvs6mtvw34"]
+[gd_scene load_steps=12 format=3 uid="uid://co2qx1q5kcdm0"]
 
-[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Fire_Particle_Continuous.gd" id="1_lgu2v"]
+[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Fire_Particle_Continuous.gd" id="1_eskdq"]
 
 [sub_resource type="Curve" id="Curve_phvv8"]
 _data = [Vector2(0.551471, 1), 0.0, -0.790391, 0, 0, Vector2(1, 0), -4.92385, 0.0, 0, 0]
@@ -71,21 +71,13 @@ color_initial_ramp = SubResource("GradientTexture1D_yvmvf")
 alpha_curve = SubResource("CurveTexture_3c08w")
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
-emitting = false
 amount = 3
 lifetime = 0.6
-one_shot = true
 process_material = SubResource("ParticleProcessMaterial_qyymi")
-script = ExtResource("1_lgu2v")
+script = ExtResource("1_eskdq")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1
-emitting = false
 amount = 16
 lifetime = 0.6
-one_shot = true
 process_material = SubResource("ParticleProcessMaterial_d7r55")
-
-[node name="Timer" type="Timer" parent="."]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
