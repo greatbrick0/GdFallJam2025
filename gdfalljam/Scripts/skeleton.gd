@@ -1,4 +1,5 @@
 extends Actor
+class_name Skeleton
 
 func _physics_process(delta):
 	
@@ -13,5 +14,6 @@ func _physics_process(delta):
 	
 	HandleMovement()
 
-func GetHit() -> void:
-	queue_free()
+func GetHit(area: Area2D) -> void:
+	if(area.get_parent() is Player):
+		queue_free()

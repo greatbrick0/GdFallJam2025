@@ -1,8 +1,11 @@
 extends Actor
+class_name Player
 
 @export var flameObj: PackedScene
 var prevFlamePos: Vector2
 @export var flameSpacing: float = 32
+
+var interactTarget: Interactable = null
 
 func _ready():
 	super._ready()
@@ -10,6 +13,10 @@ func _ready():
 
 func _physics_process(delta):
 	HandleFlames()
+	
+	if(Input.is_action_just_pressed("interact")):
+		if(interactTarget != null):
+			interactTarget.Interact()
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -32,8 +39,11 @@ func HandleFlames() -> void:
 		get_parent().add_child(flameRef)
 		flameRef.global_position = global_position
 
-func GetHit() -> void:
+func GetHit(area: Area2D) -> void:
 	LevelManager.StartTransition()
 
-func DoHit() -> void:
+func DoHit(area: Area2D) -> void:
 	velocity.y = jumpForce
+
+func _on_interact_area_area_entered(area: Area2D):
+	interactTarget = area.get_parent()

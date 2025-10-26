@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://p4jpdixxijok"]
+[gd_scene load_steps=5 format=4 uid="uid://p4jpdixxijok"]
 
 [ext_resource type="PackedScene" uid="uid://uxmg7mq10mgq" path="res://Scenes/player.tscn" id="1_v0do5"]
 [ext_resource type="PackedScene" uid="uid://c0qiakvp0ie22" path="res://Scenes/skeleton.tscn" id="3_pu8o7"]
 [ext_resource type="TileSet" uid="uid://y5q7a6m80lot" path="res://tileset1.tres" id="3_yq4yk"]
+[ext_resource type="PackedScene" uid="uid://cpeax3brrhs7m" path="res://Scenes/lever.tscn" id="4_pu8o7"]
 
 [node name="TestLevel1" type="Node2D"]
 
@@ -13,7 +14,13 @@
 [node name="Skeleton" parent="." instance=ExtResource("3_pu8o7")]
 position = Vector2(289, -103)
 
+[node name="Skeleton2" parent="." instance=ExtResource("3_pu8o7")]
+position = Vector2(362, -103)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD8/wEAAAABAAAAAAD9/wEAAAAAAAEAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAEAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAACAAEAAAACAAAAAAACAAAAAAADAAAAAAACAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAABAAAAAAAEAP//AAABAAEAAAAFAP//AAAAAAEAAAAGAP//AAABAAEAAAAHAP//AAACAAEAAAAIAP//AAABAAEAAAABAAIAAAACAAAAAAAAAAIAAAABAAAAAAD//wIAAAACAAAAAAD+/wIAAAAAAAAAAAD9/wIAAAACAAAAAAD8/wIAAAAAAAEAAAD7/wAAAAABAAEAAAA=")
 tile_set = ExtResource("3_yq4yk")
+
+[node name="Lever" parent="." instance=ExtResource("4_pu8o7")]
+position = Vector2(168, -27)

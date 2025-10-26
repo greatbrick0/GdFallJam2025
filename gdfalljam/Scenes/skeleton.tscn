@@ -47,7 +47,8 @@ radius = 16.0
 height = 60.0
 
 [node name="Skeleton" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 8
+collision_mask = 9
 script = ExtResource("1_81u3t")
 speed = 100.0
 

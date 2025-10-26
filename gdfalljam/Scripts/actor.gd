@@ -25,12 +25,12 @@ func HandleMovement() -> void:
 
 func _on_hitbox_area_entered(area: Area2D):
 	if(area.get_parent().velocity.y >= velocity.y):
-		call_deferred("GetHit", 0)
+		call_deferred("GetHit", area)
 	else:
-		call_deferred("DoHit")
+		call_deferred("DoHit", area)
 
-func GetHit() -> void:
+func GetHit(area: Area2D) -> void:
 	print(name + " died")
 
-func DoHit() -> void:
+func DoHit(area: Area2D) -> void:
 	print(name + " killed")
