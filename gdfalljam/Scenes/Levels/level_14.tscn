@@ -6,7 +6,7 @@
 [node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_foadf")]
-position = Vector2(-1316, 186)
+position = Vector2(-1834, 466)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
