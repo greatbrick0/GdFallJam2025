@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://uxmg7mq10mgq"]
+[gd_scene load_steps=12 format=3 uid="uid://uxmg7mq10mgq"]
 
 [ext_resource type="Script" uid="uid://csswtlckcwryr" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="PackedScene" uid="uid://7m24q4nd5to4" path="res://Scenes/necromancy_flame.tscn" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://db7mbv4tiseqr" path="res://Sprites/Skeleton_Type1.png" id="2_cvnsp"]
+[ext_resource type="FontFile" uid="uid://byd1mg16qsm8y" path="res://Fonts/ModernDOS8x16.ttf" id="4_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pegji"]
 atlas = ExtResource("2_cvnsp")
@@ -47,7 +48,7 @@ size = Vector2(32, 60)
 radius = 24.0
 height = 68.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["PlayerGroup"]]
 collision_layer = 2
 script = ExtResource("1_cvnsp")
 flameObj = ExtResource("2_6t5aa")
@@ -77,6 +78,26 @@ collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="InteractMarker" type="Node2D" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="InteractMarker"]
+z_index = 100
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.5
+offset_top = -48.0
+offset_right = 22.5
+offset_bottom = -17.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("4_vgqql")
+theme_override_font_sizes/font_size = 30
+text = "[E]"
 
 [connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]
 [connection signal="area_exited" from="InteractArea" to="." method="_on_interact_area_area_exited"]

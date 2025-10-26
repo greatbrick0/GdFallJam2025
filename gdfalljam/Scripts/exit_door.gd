@@ -5,6 +5,10 @@ extends Interactable
 
 @export var nextLevel: String
 
+func _ready():
+	if(decorative):
+		$Area2D.call_deferred("queue_free")
+
 func Interact() -> void:
 	if(decorative): return
 	

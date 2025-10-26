@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=4 uid="uid://co54750gmxif5"]
 
-[ext_resource type="PackedScene" uid="uid://uxmg7mq10mgq" path="res://Scenes/player.tscn" id="1_efpaj"]
+[ext_resource type="PackedScene" uid="uid://uxmg7mq10mgq" path="res://Scenes/Level Elements/player.tscn" id="1_efpaj"]
 [ext_resource type="TileSet" uid="uid://y5q7a6m80lot" path="res://tileset1.tres" id="2_arbu7"]
 
 [node name="Level2" type="Node2D"]

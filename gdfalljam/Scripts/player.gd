@@ -11,6 +11,10 @@ func _ready():
 	super._ready()
 	prevFlamePos = global_position
 
+func _process(delta):
+	if(interactTarget != null):
+		$InteractMarker.global_position = interactTarget.global_position
+
 func _physics_process(delta):
 	HandleFlames()
 	
@@ -47,6 +51,9 @@ func DoHit(area: Area2D) -> void:
 
 func _on_interact_area_area_entered(area: Area2D):
 	interactTarget = area.get_parent()
+	$InteractMarker.visible = true
 
 func _on_interact_area_area_exited(area: Area2D):
-	if(area == interactTarget): interactTarget = null
+	if(area.get_parent() == interactTarget): 
+		interactTarget = null
+		$InteractMarker.visible = false

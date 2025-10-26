@@ -11,6 +11,7 @@ func AttemptSpawnSkeleton() -> void:
 		skeleRef = skeleObj.instantiate()
 		get_parent().add_child(skeleRef)
 		skeleRef.global_position = global_position
+		skeleRef.FacePlayer()
 	else:
 		if(not skeleRef.collapsed): return
 		else:
