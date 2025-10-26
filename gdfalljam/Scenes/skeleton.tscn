@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0qiakvp0ie22"]
+[gd_scene load_steps=11 format=3 uid="uid://c0qiakvp0ie22"]
 
 [ext_resource type="Script" uid="uid://bnevd1r0cbotv" path="res://Scripts/skeleton.gd" id="1_81u3t"]
+[ext_resource type="Texture2D" uid="uid://djm3a2d42dxls" path="res://Sprites/Skeleton_Type1_Dead.png" id="3_pegji"]
 [ext_resource type="Texture2D" uid="uid://db7mbv4tiseqr" path="res://Sprites/Skeleton_Type1.png" id="3_vd5x3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pegji"]
@@ -58,6 +59,11 @@ speed = 100.0
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_shq1q")
 frame_progress = 0.597833
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("3_pegji")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cvnsp")
