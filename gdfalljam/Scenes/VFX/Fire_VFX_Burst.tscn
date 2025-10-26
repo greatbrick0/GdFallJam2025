@@ -1,6 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv1s8qymorfeg"]
-
-[ext_resource type="Script" path="res://Fire_Particle_Continuous.gd" id="1_t2h5u"]
+[gd_scene load_steps=11 format=3 uid="uid://cv1s8qymorfeg"]
 
 [sub_resource type="Curve" id="Curve_phvv8"]
 _data = [Vector2(0.551471, 1), 0.0, -0.790391, 0, 0, Vector2(1, 0), -4.92385, 0.0, 0, 0]
@@ -82,7 +80,6 @@ one_shot = true
 explosiveness = 0.77
 randomness = 1.0
 process_material = SubResource("ParticleProcessMaterial_qyymi")
-script = ExtResource("1_t2h5u")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1

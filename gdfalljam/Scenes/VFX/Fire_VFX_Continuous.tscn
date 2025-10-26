@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://co2qx1q5kcdm0"]
+[gd_scene load_steps=12 format=3 uid="uid://co2qx1q5kcdm0"]
 
-[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Scripts/VFX_Trigger.gd" id="1_eskdq"]
 [ext_resource type="Texture2D" uid="uid://dnv45sgt5sp0c" path="res://Sprites/Necromancer_walk.png" id="2_cpqdo"]
 
 [sub_resource type="Curve" id="Curve_phvv8"]
@@ -78,7 +77,6 @@ amount = 6
 lifetime = 1.6
 randomness = 0.63
 process_material = SubResource("ParticleProcessMaterial_qyymi")
-script = ExtResource("1_eskdq")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -1
