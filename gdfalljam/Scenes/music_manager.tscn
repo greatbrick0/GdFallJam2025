@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmms4nj1mw5md"]
+[gd_scene load_steps=5 format=3 uid="uid://dmms4nj1mw5md"]
 
 [ext_resource type="Script" uid="uid://cukehgwm7pr8" path="res://Scripts/music_manager.gd" id="1_h6rv6"]
+[ext_resource type="AudioStream" uid="uid://d0lrbaqehtl4c" path="res://Sounds/blipFail1.wav" id="3_sdmu8"]
 [ext_resource type="AudioStream" uid="uid://bh0ty3co75y2q" path="res://Sounds/blipSelect1.wav" id="7_m1xhr"]
 
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_a0g8o"]
@@ -30,6 +31,10 @@ volume_db = -50.0
 
 [node name="Blip1" type="AudioStreamPlayer" parent="GeneralEffects"]
 stream = ExtResource("7_m1xhr")
+volume_db = -10.0
+
+[node name="Blip2" type="AudioStreamPlayer" parent="GeneralEffects"]
+stream = ExtResource("3_sdmu8")
 volume_db = -10.0
 
 [connection signal="finished" from="Track0" to="." method="OnTrackFinished" binds= [0]]

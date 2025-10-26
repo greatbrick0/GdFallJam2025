@@ -24,3 +24,7 @@ tile_set = ExtResource("3_yq4yk")
 
 [node name="Lever" parent="." instance=ExtResource("4_pu8o7")]
 position = Vector2(168, -27)
+
+[node name="Lever2" parent="." instance=ExtResource("4_pu8o7")]
+position = Vector2(406, -94)
+oneUse = true
