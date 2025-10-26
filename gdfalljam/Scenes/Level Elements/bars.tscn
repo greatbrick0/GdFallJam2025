@@ -8,6 +8,7 @@ size = Vector2(64, 64)
 
 [node name="Bars" type="Node2D"]
 script = ExtResource("1_oxmxq")
+blockers = 1
 
 [node name="Visuals" type="Node2D" parent="."]
 
