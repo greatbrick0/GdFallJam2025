@@ -47,3 +47,6 @@ func DoHit(area: Area2D) -> void:
 
 func _on_interact_area_area_entered(area: Area2D):
 	interactTarget = area.get_parent()
+
+func _on_interact_area_area_exited(area: Area2D):
+	if(area == interactTarget): interactTarget = null
