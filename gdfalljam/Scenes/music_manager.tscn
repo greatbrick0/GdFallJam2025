@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmms4nj1mw5md"]
+[gd_scene load_steps=7 format=3 uid="uid://dmms4nj1mw5md"]
 
 [ext_resource type="Script" uid="uid://cukehgwm7pr8" path="res://Scripts/music_manager.gd" id="1_h6rv6"]
 [ext_resource type="AudioStream" uid="uid://d0lrbaqehtl4c" path="res://Sounds/blipFail1.wav" id="3_sdmu8"]
 [ext_resource type="AudioStream" uid="uid://bbrckkugj68xy" path="res://Sounds/Crumble.wav" id="4_b40f5"]
+[ext_resource type="AudioStream" uid="uid://c5gf5qgb4d61i" path="res://Sounds/burn.wav" id="5_a0g8o"]
 [ext_resource type="AudioStream" uid="uid://bh0ty3co75y2q" path="res://Sounds/blipSelect1.wav" id="7_m1xhr"]
 
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_a0g8o"]
@@ -40,6 +41,10 @@ volume_db = -10.0
 
 [node name="Crumble" type="AudioStreamPlayer" parent="GeneralEffects"]
 stream = ExtResource("4_b40f5")
+volume_db = -10.0
+
+[node name="Burn" type="AudioStreamPlayer" parent="GeneralEffects"]
+stream = ExtResource("5_a0g8o")
 volume_db = -10.0
 
 [connection signal="finished" from="Track0" to="." method="OnTrackFinished" binds= [0]]

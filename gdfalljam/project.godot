@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="GdFallJam"
+config/name="Necromancer's Curse"
 run/main_scene="uid://hhfpsx1l1wxf"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://cu571fcs5s37o"
 
 [autoload]
 
