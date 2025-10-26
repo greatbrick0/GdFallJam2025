@@ -43,11 +43,9 @@ position = Vector2(-8, 338)
 
 [node name="Bars" parent="." instance=ExtResource("6_yy6i0")]
 position = Vector2(600, 146)
-blockers = 1
 
 [node name="Bars2" parent="." instance=ExtResource("6_yy6i0")]
 position = Vector2(600, 82)
-blockers = 1
 
 [connection signal="UsedPlate" from="PressurePlate" to="Bars" method="AdjustBlockersByBool"]
 [connection signal="UsedPlate" from="PressurePlate" to="Bars2" method="AdjustBlockersByBool"]
