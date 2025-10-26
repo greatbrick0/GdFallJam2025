@@ -11,6 +11,13 @@ func _ready():
 func AdjustBlockersByBool(newBool: bool) -> void:
 	blockers -= 1 if newBool else -1
 	targetPos = positions[blockers]
+	
+	for enemy in get_tree().get_nodes_in_group("skeletons"):
+		enemy.can_move = false
+		
+	await get_tree().create_timer(1).timeout
+	for enemy in get_tree().get_nodes_in_group("skeletons"):
+		enemy.can_move = true
 
 func AdjustBlockersByInt(newInt: int) -> void:
 	blockers += newInt

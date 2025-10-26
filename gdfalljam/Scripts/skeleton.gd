@@ -3,7 +3,10 @@ class_name Skeleton
 
 var collapsed: bool = false
 
+var can_move = true
+
 func _ready():
+	add_to_group("skeletons")
 	super._ready()
 
 func _physics_process(delta):
@@ -18,6 +21,8 @@ func _physics_process(delta):
 			velocity += get_gravity() * delta
 			velocity.x = 0
 		elif (position.x >= GetPlayerPos() - 4 && position.x <= GetPlayerPos() + 4):
+			velocity.x = 0
+		elif (can_move == false):
 			velocity.x = 0
 		else:
 			velocity.x = speed * (1 if facingRight else -1)
