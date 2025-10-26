@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://pu2id3yji55y"]
 
 [ext_resource type="Script" uid="uid://buvgwlije56cn" path="res://Scripts/pressure_plate.gd" id="1_i3re1"]
-[ext_resource type="Texture2D" uid="uid://dj04untltawv3" path="res://icon.svg" id="1_ph8cv"]
+[ext_resource type="Texture2D" uid="uid://2nq6ijg0q5k5" path="res://Sprites/TitleBackground.png" id="2_i3re1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3re1"]
 size = Vector2(64, 32)
@@ -13,8 +13,9 @@ script = ExtResource("1_i3re1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
 position = Vector2(0, 16)
-scale = Vector2(0.505, 0.235)
-texture = ExtResource("1_ph8cv")
+texture = ExtResource("2_i3re1")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 32)
 
 [node name="TrigggerArea" type="Area2D" parent="."]
 position = Vector2(0, 16)

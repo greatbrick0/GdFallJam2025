@@ -13,6 +13,7 @@ config_version=5
 config/name="Necromancer's Curse"
 run/main_scene="uid://hhfpsx1l1wxf"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/image="uid://2nq6ijg0q5k5"
 config/icon="uid://cu571fcs5s37o"
 
 [autoload]
