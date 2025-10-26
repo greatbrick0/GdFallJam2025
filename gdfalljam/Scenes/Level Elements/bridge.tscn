@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxmxq"]
 size = Vector2(64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkq0d"]
-size = Vector2(64, 64)
+[sub_resource type="CircleShape2D" id="CircleShape2D_87nni"]
+radius = 32.0
 
 [node name="Bridge" type="Node2D"]
 script = ExtResource("1_87nni")
@@ -32,6 +32,6 @@ collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
-shape = SubResource("RectangleShape2D_gkq0d")
+shape = SubResource("CircleShape2D_87nni")
 
 [connection signal="area_entered" from="TriggerArea" to="." method="_on_trigger_area_area_entered"]

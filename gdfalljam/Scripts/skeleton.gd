@@ -28,6 +28,7 @@ func GetHit(area: Area2D) -> void:
 		collapsed = true
 		$Visuals/AnimatedSprite2D.visible = false
 		$Visuals/Sprite2D.visible = true
+		MusicManager.PlayGeneral(2)
 		$Hitbox.call_deferred("shape_owner_set_disabled", 0, true)
 
 func Respawn() -> void:
