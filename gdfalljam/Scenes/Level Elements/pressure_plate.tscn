@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://pu2id3yji55y"]
+
+[ext_resource type="Script" uid="uid://buvgwlije56cn" path="res://Scripts/pressure_plate.gd" id="1_i3re1"]
+[ext_resource type="Texture2D" uid="uid://dj04untltawv3" path="res://icon.svg" id="1_ph8cv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3re1"]
+size = Vector2(64, 32)
+
+[node name="PressurePlate" type="Node2D"]
+script = ExtResource("1_i3re1")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 16)
+scale = Vector2(0.505, 0.235)
+texture = ExtResource("1_ph8cv")
+
+[node name="TrigggerArea" type="Area2D" parent="."]
+position = Vector2(0, 16)
+collision_layer = 0
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrigggerArea"]
+shape = SubResource("RectangleShape2D_i3re1")
+
+[connection signal="body_entered" from="TrigggerArea" to="." method="_on_triggger_area_body_entered"]
+[connection signal="body_exited" from="TrigggerArea" to="." method="_on_triggger_area_body_exited"]

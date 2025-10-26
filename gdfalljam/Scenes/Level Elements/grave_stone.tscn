@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://blcvt3h7lfock" path="res://Scripts/grave_stone.gd" id="1_d4cdo"]
 [ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="1_mc51p"]
 [ext_resource type="PackedScene" uid="uid://c0qiakvp0ie22" path="res://Scenes/skeleton.tscn" id="2_rwwg3"]
-[ext_resource type="PackedScene" uid="uid://cv1s8qymorfeg" path="res://Scenes/VFX/Fire_VFX_Burst.tscn" id="4_uni3t"]
+[ext_resource type="PackedScene" uid="uid://e2all1a2nvit" path="res://Scenes/VFX/Fire_VFX_CPUBurst.tscn" id="4_uni3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mc51p"]
 size = Vector2(64, 64)
@@ -21,7 +21,8 @@ texture = ExtResource("1_mc51p")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
 
-[node name="GPUParticles2D" parent="Visuals" instance=ExtResource("4_uni3t")]
+[node name="Particles" parent="Visuals" instance=ExtResource("4_uni3t")]
+emitting = false
 
 [node name="TriggerArea" type="Area2D" parent="."]
 collision_layer = 32

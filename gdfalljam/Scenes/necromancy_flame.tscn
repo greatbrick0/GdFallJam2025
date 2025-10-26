@@ -12,6 +12,7 @@ lifeTime = 1.6
 activateTime = 0.5
 
 [node name="Visuals" type="Node2D" parent="."]
+z_index = -1
 
 [node name="CPUParticles2D" parent="Visuals" instance=ExtResource("2_ca6tn")]
 

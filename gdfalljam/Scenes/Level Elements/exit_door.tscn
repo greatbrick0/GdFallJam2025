@@ -10,6 +10,7 @@ size = Vector2(64, 64)
 script = ExtResource("1_b4nh8")
 
 [node name="Visuals" type="Node2D" parent="."]
+z_index = -5
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
 modulate = Color(0, 0.585938, 0.0366211, 1)
