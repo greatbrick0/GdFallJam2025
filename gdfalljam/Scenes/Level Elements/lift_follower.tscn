@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmrps5yfyfivq"]
 
-[ext_resource type="Script" uid="uid://c2l24njcarym3" path="res://Scripts/lift_follower.gd" id="1_nqww7"]
+[ext_resource type="Script" path="res://Scripts/lift_follower.gd" id="1_nqww7"]
 [ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="2_re8hy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxmxq"]
@@ -12,6 +12,7 @@ script = ExtResource("1_nqww7")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+modulate = Color(0.54902, 0.933333, 0, 1)
 scale = Vector2(2, 2)
 texture = ExtResource("2_re8hy")
 region_enabled = true

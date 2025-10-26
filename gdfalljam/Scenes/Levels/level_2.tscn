@@ -9,7 +9,7 @@
 [node name="Level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_oylv5")]
-position = Vector2(-616, 146)
+position = Vector2(-699, 146)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
@@ -55,7 +55,3 @@ position = Vector2(216, 146)
 [node name="ExitDoor" parent="." instance=ExtResource("5_8qsmg")]
 position = Vector2(664, 146)
 nextLevel = "res://Scenes/Levels/level_3.tscn"
-
-[node name="ExitDoor2" parent="." instance=ExtResource("5_8qsmg")]
-position = Vector2(-680, 146)
-decorative = true

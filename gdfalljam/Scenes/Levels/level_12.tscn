@@ -11,7 +11,7 @@
 [node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_p302k")]
-position = Vector2(-1640, 210)
+position = Vector2(-1739, 210)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-456, 18)
@@ -33,10 +33,6 @@ tile_set = ExtResource("2_svmjr")
 position = Vector2(-488, -750)
 blockers = 1
 nextLevel = "res://Scenes/Levels/level_13.tscn"
-
-[node name="ExitDoor3" parent="." instance=ExtResource("3_svmjr")]
-position = Vector2(-1832, 210)
-decorative = true
 
 [node name="GraveStone" parent="." instance=ExtResource("4_udswc")]
 position = Vector2(-488, 210)

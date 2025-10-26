@@ -12,6 +12,7 @@ script = ExtResource("1_3d2sh")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+modulate = Color(0.548274, 0.935262, 0, 1)
 scale = Vector2(2, 2)
 texture = ExtResource("2_2gsix")
 region_enabled = true

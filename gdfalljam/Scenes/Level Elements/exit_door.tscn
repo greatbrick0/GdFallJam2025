@@ -13,7 +13,7 @@ script = ExtResource("1_b4nh8")
 z_index = -5
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(0, 0.585938, 0.0366211, 1)
+modulate = Color(0, 0.636529, 0.282909, 1)
 scale = Vector2(2, 2)
 texture = ExtResource("1_elbft")
 region_enabled = true

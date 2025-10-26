@@ -8,7 +8,7 @@
 [node name="Level2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_efpaj")]
-position = Vector2(-1000, 146)
+position = Vector2(-1110, 146)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
@@ -28,10 +28,6 @@ tile_set = ExtResource("2_arbu7")
 [node name="ExitDoor2" parent="." instance=ExtResource("3_rt0ev")]
 position = Vector2(1112, 146)
 nextLevel = "res://Scenes/Levels/level_7.tscn"
-
-[node name="ExitDoor3" parent="." instance=ExtResource("3_rt0ev")]
-position = Vector2(-1128, 146)
-decorative = true
 
 [node name="Bridge2" parent="." instance=ExtResource("4_vrotf")]
 position = Vector2(-808, 210)

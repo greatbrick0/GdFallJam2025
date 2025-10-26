@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgosw5ukbqhgr"]
 
-[ext_resource type="Script" uid="uid://blcvt3h7lfock" path="res://Scripts/grave_stone.gd" id="1_d4cdo"]
+[ext_resource type="Script" path="res://Scripts/grave_stone.gd" id="1_d4cdo"]
 [ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="1_mc51p"]
 [ext_resource type="PackedScene" uid="uid://c0qiakvp0ie22" path="res://Scenes/skeleton.tscn" id="2_rwwg3"]
 [ext_resource type="PackedScene" uid="uid://e2all1a2nvit" path="res://Scenes/VFX/Fire_VFX_CPUBurst.tscn" id="4_uni3t"]
@@ -15,7 +15,7 @@ skeleObj = ExtResource("2_rwwg3")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(1, 0, 0.84375, 1)
+modulate = Color(1, 0.425265, 0.866704, 1)
 scale = Vector2(2, 2)
 texture = ExtResource("1_mc51p")
 region_enabled = true
