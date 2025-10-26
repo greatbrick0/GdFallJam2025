@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmms4nj1mw5md"]
+
+[ext_resource type="Script" uid="uid://cukehgwm7pr8" path="res://Scripts/music_manager.gd" id="1_h6rv6"]
+[ext_resource type="AudioStream" uid="uid://bh0ty3co75y2q" path="res://Sounds/blipSelect1.wav" id="7_m1xhr"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_a0g8o"]
+mix_rate_mode = 0
+mix_rate = 20.0
+buffer_length = 1.0
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_h6rv6")
+trackSilentVolume = -45.0
+trackFullVolume = -28.0
+
+[node name="Track0" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamGenerator_a0g8o")
+volume_db = -50.0
+autoplay = true
+
+[node name="Track1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_m1xhr")
+volume_db = -50.0
+
+[node name="Track2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_m1xhr")
+volume_db = -50.0
+
+[node name="GeneralEffects" type="Node" parent="."]
+
+[node name="Blip1" type="AudioStreamPlayer" parent="GeneralEffects"]
+stream = ExtResource("7_m1xhr")
+volume_db = -10.0
+
+[connection signal="finished" from="Track0" to="." method="OnTrackFinished" binds= [0]]
+[connection signal="finished" from="Track1" to="." method="OnTrackFinished" binds= [1]]
+[connection signal="finished" from="Track2" to="." method="OnTrackFinished" binds= [2]]

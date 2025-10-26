@@ -10,4 +10,5 @@ func Interact() -> void:
 		return
 	switched = not switched
 	$Visuals.scale.x = (1 if not switched else -1)
+	MusicManager.PlayGeneral(0)
 	UsedLever.emit(switched)
