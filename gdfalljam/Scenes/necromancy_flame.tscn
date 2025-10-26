@@ -15,6 +15,7 @@ activateTime = 0.5
 z_index = -1
 
 [node name="CPUParticles2D" parent="Visuals" instance=ExtResource("2_ca6tn")]
+emitting = false
 
 [node name="TriggerArea" type="Area2D" parent="."]
 collision_layer = 16

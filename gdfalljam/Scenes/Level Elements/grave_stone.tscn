@@ -22,7 +22,6 @@ region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
 
 [node name="Particles" parent="Visuals" instance=ExtResource("4_uni3t")]
-emitting = false
 
 [node name="TriggerArea" type="Area2D" parent="."]
 collision_layer = 32
