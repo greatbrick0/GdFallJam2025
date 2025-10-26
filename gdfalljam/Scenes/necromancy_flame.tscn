@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://7m24q4nd5to4"]
 
 [ext_resource type="Script" uid="uid://d1f8lxof5c4ff" path="res://Scripts/necromancy_flame.gd" id="1_ca6tn"]
-[ext_resource type="Texture2D" uid="uid://djm3a2d42dxls" path="res://Sprites/Skeleton_Type1_Dead.png" id="1_fllcq"]
+[ext_resource type="PackedScene" uid="uid://co2qx1q5kcdm0" path="res://Scenes/VFX/Fire_VFX_Continuous.tscn" id="2_ca6tn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fllcq"]
 size = Vector2(64, 64)
@@ -13,10 +13,8 @@ activateTime = 0.5
 
 [node name="Visuals" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-modulate = Color(0.277344, 1, 0.847565, 1)
-scale = Vector2(2, 2)
-texture = ExtResource("1_fllcq")
+[node name="GPUParticles2D" parent="Visuals" instance=ExtResource("2_ca6tn")]
+scale = Vector2(1e-05, 1e-05)
 
 [node name="TriggerArea" type="Area2D" parent="."]
 collision_layer = 16

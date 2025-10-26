@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://eiq2oqtoafcv" path="res://Scenes/Level Elements/exit_door.tscn" id="3_nfly3"]
 [ext_resource type="PackedScene" uid="uid://dgosw5ukbqhgr" path="res://Scenes/Level Elements/grave_stone.tscn" id="4_t8c31"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_nfly3")]
 position = Vector2(-680, 146)
