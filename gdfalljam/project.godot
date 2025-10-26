@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LevelManager="*res://Scenes/level_manager.tscn"
 MusicManager="*res://Scenes/music_manager.tscn"
+GameClock="*res://Scripts/game_clock.gd"
 
 [display]
 
