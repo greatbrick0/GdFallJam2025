@@ -12,7 +12,7 @@ func AttemptSpawnSkeleton() -> void:
 		get_parent().add_child(skeleRef)
 		skeleRef.global_position = global_position
 		skeleRef.FacePlayer()
-		$Visuals/GPUParticles2D.Enable()
+		$Visuals/Particles.Enable()
 	else:
 		if(not skeleRef.collapsed): return
 		else:
