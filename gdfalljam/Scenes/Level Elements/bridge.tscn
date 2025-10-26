@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvvui0urjk1rx"]
+
+[ext_resource type="Script" uid="uid://cxxmwb38bfofv" path="res://Scripts/bridge.gd" id="1_87nni"]
+[ext_resource type="Texture2D" uid="uid://bd0sl13j16v4l" path="res://Sprites/Wall_Flat_6Variations.png" id="2_3ebhk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxmxq"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkq0d"]
+size = Vector2(64, 64)
+
+[node name="Bridge" type="Node2D"]
+script = ExtResource("1_87nni")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+modulate = Color(0.584507, 0.54245, 0.878906, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_3ebhk")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_oxmxq")
+
+[node name="TriggerArea" type="Area2D" parent="."]
+position = Vector2(0, -32)
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+shape = SubResource("RectangleShape2D_gkq0d")
+
+[connection signal="area_entered" from="TriggerArea" to="." method="_on_trigger_area_area_entered"]
