@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://crt0r7ifeeuhk"]
+
+[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Scripts/VFX_Trigger.gd" id="1_nsdsv"]
+
+[sub_resource type="Gradient" id="Gradient_t4p5e"]
+offsets = PackedFloat32Array(0, 0.0933333, 0.793333, 1)
+colors = PackedColorArray(0, 1, 0, 0, 0.0941176, 1, 0.0941176, 1, 0, 0.541176, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="Gradient" id="Gradient_xbrns"]
+offsets = PackedFloat32Array(0, 0.0933333, 0.293333, 0.793333, 1)
+colors = PackedColorArray(0, 1, 0, 0, 0.0941176, 0.678431, 0.0941176, 1, 0.0666667, 0.356863, 0.0666667, 1, 0, 0.180392, 0, 1, 0, 0, 0, 0)
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+amount = 6
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.49
+direction = Vector2(-1, 0)
+gravity = Vector2(0, -400)
+initial_velocity_max = 111.11
+angular_velocity_max = 291.91
+orbit_velocity_max = 0.25
+radial_accel_min = -90.58
+radial_accel_max = 81.14
+tangential_accel_min = -18.18
+tangential_accel_max = 20.2
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+color = Color(0, 1, 0, 1)
+color_ramp = SubResource("Gradient_t4p5e")
+script = ExtResource("1_nsdsv")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 12
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.36
+emission_shape = 1
+emission_sphere_radius = 1.5
+direction = Vector2(0, 1)
+spread = 83.18
+gravity = Vector2(0, -100)
+initial_velocity_max = 30.0
+angular_velocity_max = 291.91
+radial_accel_min = -90.58
+radial_accel_max = 81.14
+tangential_accel_min = -18.18
+tangential_accel_max = 20.2
+scale_amount_min = 15.0
+scale_amount_max = 25.0
+color = Color(0, 1, 0, 1)
+color_ramp = SubResource("Gradient_xbrns")

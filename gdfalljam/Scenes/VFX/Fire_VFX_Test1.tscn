@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bqbhvs6mtvw34"]
 
-[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Fire_Particle_Continuous.gd" id="1_lgu2v"]
+[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Scripts/VFX_Trigger.gd" id="1_lgu2v"]
 
 [sub_resource type="Curve" id="Curve_phvv8"]
 _data = [Vector2(0.551471, 1), 0.0, -0.790391, 0, 0, Vector2(1, 0), -4.92385, 0.0, 0, 0]
@@ -23,8 +23,8 @@ linear_accel_min = -2.23517e-06
 linear_accel_max = 62.07
 radial_accel_min = -2.23517e-06
 radial_accel_max = 22.99
-scale_min = 3.0
-scale_max = 3.0
+scale_min = 4.0
+scale_max = 6.0
 color = Color(0.235294, 1, 0.360784, 1)
 alpha_curve = SubResource("CurveTexture_3c08w")
 
@@ -65,8 +65,8 @@ linear_accel_min = -2.23517e-06
 linear_accel_max = 19.54
 radial_accel_min = -2.23517e-06
 radial_accel_max = 22.99
-scale_min = 6.0
-scale_max = 12.0
+scale_min = 12.0
+scale_max = 24.0
 scale_curve = SubResource("CurveTexture_4sv0y")
 color_ramp = SubResource("GradientTexture1D_bifcw")
 color_initial_ramp = SubResource("GradientTexture1D_yvmvf")
@@ -86,7 +86,3 @@ amount = 16
 lifetime = 0.6
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_d7r55")
-
-[node name="Timer" type="Timer" parent="."]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

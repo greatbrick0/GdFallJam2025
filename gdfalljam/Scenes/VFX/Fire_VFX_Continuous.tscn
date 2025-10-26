@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://co2qx1q5kcdm0"]
+[gd_scene load_steps=13 format=3 uid="uid://co2qx1q5kcdm0"]
 
-[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Fire_Particle_Continuous.gd" id="1_eskdq"]
+[ext_resource type="Script" uid="uid://3jas6hewh0m8" path="res://Scripts/VFX_Trigger.gd" id="1_eskdq"]
+[ext_resource type="Texture2D" uid="uid://dnv45sgt5sp0c" path="res://Sprites/Necromancer_walk.png" id="2_cpqdo"]
 
 [sub_resource type="Curve" id="Curve_phvv8"]
 _data = [Vector2(0.551471, 1), 0.0, -0.790391, 0, 0, Vector2(1, 0), -4.92385, 0.0, 0, 0]
@@ -23,8 +24,8 @@ linear_accel_min = -2.23517e-06
 linear_accel_max = 62.07
 radial_accel_min = -2.23517e-06
 radial_accel_max = 22.99
-scale_min = 3.0
-scale_max = 3.0
+scale_min = 6.0
+scale_max = 6.0
 color = Color(0.235294, 1, 0.360784, 1)
 alpha_curve = SubResource("CurveTexture_3c08w")
 
@@ -65,16 +66,17 @@ linear_accel_min = -2.23517e-06
 linear_accel_max = 19.54
 radial_accel_min = -2.23517e-06
 radial_accel_max = 22.99
-scale_min = 6.0
-scale_max = 12.0
+scale_min = 12.0
+scale_max = 18.0
 scale_curve = SubResource("CurveTexture_4sv0y")
 color_ramp = SubResource("GradientTexture1D_bifcw")
 color_initial_ramp = SubResource("GradientTexture1D_yvmvf")
 alpha_curve = SubResource("CurveTexture_3c08w")
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
-amount = 3
-lifetime = 1.3
+amount = 6
+lifetime = 1.6
+randomness = 0.63
 process_material = SubResource("ParticleProcessMaterial_qyymi")
 script = ExtResource("1_eskdq")
 
@@ -83,3 +85,7 @@ z_index = -1
 amount = 16
 lifetime = 0.6
 process_material = SubResource("ParticleProcessMaterial_d7r55")
+
+[node name="NecromancerWalk" type="Sprite2D" parent="."]
+position = Vector2(74, -15)
+texture = ExtResource("2_cpqdo")
