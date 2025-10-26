@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export  var speed = 300.0
-@export var jumpForce = -500.0
+@export var jumpForce = -650.0
 
 var facingRight: bool = false
 
