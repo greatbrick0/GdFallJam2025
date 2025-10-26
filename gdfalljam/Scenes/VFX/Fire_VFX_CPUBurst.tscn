@@ -15,6 +15,7 @@ colors = PackedColorArray(0, 0.337255, 0, 1, 1, 1, 1, 1)
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
 z_index = 1
+emitting = false
 amount = 16
 lifetime = 1.5
 one_shot = true
@@ -35,6 +36,7 @@ color_ramp = SubResource("Gradient_t4p5e")
 script = ExtResource("1_1j7b3")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
 amount = 24
 lifetime = 2.5
 one_shot = true
